@@ -9,7 +9,8 @@ import { ThreeMFLoader } from "three/examples/jsm/Addons.js";
  * Base
  */
 // Debug
-const gui = new GUI();
+// const gui = new GUI();
+
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
@@ -277,18 +278,19 @@ const floor = new THREE.Mesh(
 floor.rotation.x = -Math.PI / 2;
 scene.add(floor);
 
-gui
-  .add(floor.material, "displacementScale")
-  .min(0)
-  .max(1)
-  .step(0.001)
-  .name("floorDisplacementScale");
-gui
-  .add(floor.material, "displacementBias")
-  .min(-1)
-  .max(1)
-  .step(0.001)
-  .name("floorDisplacementBias");
+// gui
+//   .add(floor.material, "displacementScale")
+//   .min(0)
+//   .max(1)
+//   .step(0.001)
+//   .name("floorDisplacementScale");
+// gui
+//   .add(floor.material, "displacementBias")
+//   .min(-1)
+//   .max(1)
+//   .step(0.001)
+//   .name("floorDisplacementBias");
+
 
 /**
  * Lights
@@ -432,7 +434,6 @@ sky.material.uniforms["sunPosition"].value.set(0.3, -0.038, -0.95);
  */
 // scene.fog = new THREE.Fog("#ff0000", 1, 13);
 scene.fog = new THREE.FogExp2("#02343f", 0.1);
-
 
 /**
  * Animate
